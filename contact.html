@@ -3,151 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us</title>
-<meta name="theme-color" content="#2f4a33">
+<title>Contact Us | Folly Beach Bachelorette</title>
+<meta name="theme-color" content="#ffffff">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--forest:#2f4a33;--moss:#56703f;--bark:#6b4a2e;--bark-dark:#4f3520;--tan:#d9c6a5;--tan-light:#ece2cf;--cream:#f7f2e8;--ink:#2b2a24;--muted:#6d685b}
-  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);font-size:15.5px;line-height:1.65}
-  h1,h2,h3{font-family:'Lora',serif;color:var(--forest);font-weight:700}
-  h1{font-size:clamp(1.8rem,4vw,2.4rem)}
-  h2{font-size:1.3rem;margin-top:1.6rem}
-  a{color:var(--bark)} a:hover{color:var(--forest)}
-  .wrap{max-width:1080px}
-  .label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
-  .topbar{background:var(--forest);color:var(--tan-light);font-size:.82rem;padding:.35rem 0}
-  .topbar a{color:#fff;font-weight:600;text-decoration:none}
-  .navbar{background:#fff;border-bottom:3px solid var(--tan);padding:.5rem 0}
-  .navbar-brand{font-family:'Lora',serif;font-weight:700;color:var(--forest)!important;font-size:1.2rem}
-  .navbar-brand span{color:var(--bark)}
-  .nav-link{font-size:.88rem;font-weight:600;color:var(--ink)!important;padding:.4rem .7rem!important}
-  .nav-link:hover,.nav-link.active{color:var(--moss)!important}
-  .btn-bark{background:var(--bark);color:#fff;border:0;border-radius:6px;font-weight:600;font-size:.88rem;padding:.55rem 1.1rem}
-  .btn-bark:hover{background:var(--bark-dark);color:#fff}
-  .page-head{background:#fff;padding:2rem 0 1.6rem;border-bottom:1px solid var(--tan)}
-  .page-head p{color:var(--muted);max-width:680px;margin:0}
-  .panel{background:#fff;border:1px solid var(--tan);border-radius:10px;padding:1.4rem 1.5rem}
-  .side{background:var(--forest);color:var(--tan-light);border-radius:10px;padding:1.4rem}
-  .side h3{color:#fff;font-size:1.1rem}
-  .side a:not(.btn){color:#fff}
-  .ticks{list-style:none;padding:0;margin:0}
-  .ticks li{padding-left:1.2rem;position:relative;margin-bottom:.4rem}
-  .ticks li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;background:var(--moss);border-radius:1px}
-  footer{background:var(--forest);color:var(--tan-light);font-size:.84rem;padding:1.6rem 0 1.2rem;margin-top:2.2rem}
-  footer a{color:#fff;text-decoration:none} footer a:hover{text-decoration:underline}
-  footer .brand{font-family:'Lora',serif;font-weight:700;color:#fff;font-size:1.05rem}
+  :root{--ink:#3a3a3a;--muted:#777;--line:#e6e6e6;--band:#f6f6f6;--link:#e8435a;--link-dark:#c22f45}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:#fff;font-size:17px;line-height:1.75}
+  a{color:var(--link);text-decoration:none}
+  a:hover{color:var(--link-dark);text-decoration:underline}
+  .site-head{border-bottom:1px solid var(--line);background:#fff}
+  .site-head .brand{font-family:'Josefin Sans',sans-serif;font-weight:400;font-size:1.15rem;color:var(--ink);letter-spacing:.02em}
+  .site-head .brand:hover{text-decoration:none;color:var(--link)}
+  .menu{display:flex;flex-wrap:wrap;list-style:none;margin:0;padding:0}
+  .menu li + li{border-left:1px solid var(--line)}
+  .menu a{display:block;padding:.2rem 1.1rem;font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:1rem;color:#666}
+  .menu a:hover,.menu a[aria-current]{color:var(--link);text-decoration:none}
+  .title-band{background:var(--band);border-bottom:1px solid var(--line);padding:3.2rem 1rem 3rem;text-align:center}
+  .meta{font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:.95rem;color:#666;margin-bottom:.8rem}
+  .title-band h1{font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:clamp(2rem,4.6vw,3rem);line-height:1.25;color:#333;margin:0}
+  .article{padding:2.6rem 0 2rem}
+  .article p{margin-bottom:1.4rem}
+  .article h2{font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:1.05rem;color:#333;margin:0 0 .15rem}
+  .article ul{padding-left:1.2rem;margin-bottom:1.4rem}
+  .form-control,.form-select{border-radius:0;border-color:#ddd}
+  .form-control:focus,.form-select:focus{border-color:var(--link);box-shadow:none}
+  .form-label{font-weight:600;font-size:.95rem;margin-bottom:.25rem}
+  .btn-plain{display:inline-block;background:var(--link);color:#fff;border:0;padding:.55rem 1.3rem;font-weight:600}
+  .btn-plain:hover{background:var(--link-dark);color:#fff}
+  footer{border-top:1px solid var(--line);background:var(--band);color:#888;font-size:.88rem;padding:1.6rem 1rem;text-align:center}
+  footer a{color:#666}
+  @media (max-width:575px){.menu a{padding:.2rem .7rem}}
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="container wrap d-flex justify-content-between flex-wrap gap-2">
-    <span>Independent bachelorette planning guide for Folly Beach, SC</span>
-    <a href="https://michaelatyourplace.com/" rel="noopener">Book the private show →</a>
-  </div>
-</div>
-
-<nav class="navbar navbar-expand-md sticky-top">
-  <div class="container wrap">
-    <a class="navbar-brand" href="index.html">Folly Beach <span>Bachelorette</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto align-items-md-center">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
-        <li class="nav-item ms-md-2"><a class="btn btn-bark" href="https://michaelatyourplace.com/" rel="noopener">Book Now</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<header class="page-head">
-  <div class="container wrap">
-    <p class="label mb-1">Get in Touch</p>
-    <h1>Contact Us</h1>
-    <p>Have a question, a correction, or a suggestion for the guide? Send us a note and we'll get back to you.</p>
+<header class="site-head">
+  <div class="container-fluid px-3 px-lg-5 py-3 d-flex flex-wrap align-items-center justify-content-between gap-2">
+    <a class="brand" href="index.html">Folly Beach Bachelorette</a>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
   </div>
 </header>
 
-<main class="container wrap py-4">
-  <div class="row g-4">
-    <div class="col-lg-7">
-      <div class="panel">
-        <h2 class="mt-0">Send a Message</h2>
-        <!-- Replace action="#" with your form endpoint (Formspree, Netlify Forms, or your own handler) -->
-        <form action="#" method="POST">
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <label for="name" class="form-label small fw-semibold">Name</label>
-              <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="col-sm-6">
-              <label for="email" class="form-label small fw-semibold">Email</label>
-              <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="col-12">
-              <label for="subject" class="form-label small fw-semibold">Subject</label>
-              <select class="form-select" id="subject" name="subject">
-                <option>General question</option>
-                <option>Update or correction to the guide</option>
-                <option>Business listing suggestion</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <label for="message" class="form-label small fw-semibold">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-bark">Send Message</button>
-            </div>
+<div class="title-band">
+  <p class="meta">Folly Beach, SC · Get in Touch</p>
+  <h1>Contact Us</h1>
+</div>
+
+<div class="container-fluid px-3 px-lg-5">
+  <div class="row justify-content-center">
+    <main class="col-lg-8 col-xl-6 article">
+      <p>Have a question, a correction, or a suggestion for the guide? Send us a note and we'll get back to you.</p>
+
+      <!-- Replace action="#" with your form endpoint (Formspree, Netlify Forms, or your own handler) -->
+      <form action="#" method="POST" class="mb-4">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
           </div>
-        </form>
-        <p class="small text-muted mt-3 mb-0">By submitting this form, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
-      </div>
-    </div>
-    <div class="col-lg-5">
-      <div class="panel mb-3">
-        <h3 class="h6 fw-bold" style="font-family:'Inter',sans-serif;color:var(--bark-dark)">Other Ways to Reach Us</h3>
-        <p class="small mb-1"><strong>Email:</strong> <a href="mailto:hello@example.com">hello@example.com</a></p>
-        <p class="small mb-0"><strong>Area:</strong> Folly Beach, SC</p>
-      </div>
-      <div class="side">
-        <p class="label mb-1" style="color:var(--tan)">Looking to Book the Show?</p>
-        <h3>Michael At Your Place</h3>
-        <p>We're an independent guide. To book a private bachelorette show at your Folly Beach rental, contact Michael At Your Place directly.</p>
-        <a class="btn btn-bark" href="https://michaelatyourplace.com/" rel="noopener">Book Directly »</a>
-      </div>
-    </div>
+          <div class="col-sm-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="col-12">
+            <label for="subject" class="form-label">Subject</label>
+            <select class="form-select" id="subject" name="subject">
+              <option>General question</option>
+              <option>Update or correction to the guide</option>
+              <option>Business listing suggestion</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn-plain">Send Message</button>
+          </div>
+        </div>
+      </form>
+      <p class="small text-muted">By submitting this form, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+
+      <h2>Other Ways to Reach Us</h2>
+    </main>
   </div>
-</main>
+</div>
 
 <footer>
-  <div class="container wrap">
-    <div class="row g-3">
-      <div class="col-md-5">
-        <div class="brand">Independent Planning Guide</div>
-        <p class="mb-0">An independent planning guide for bachelorette groups heading to Folly Beach, South Carolina.</p>
-      </div>
-      <div class="col-6 col-md-3">
-        <a href="index.html">Home</a><br>
-        <a href="about.html">About</a><br>
-        <a href="contact.html">Contact</a><br>
-        <a href="privacy-policy.html">Privacy Policy</a>
-      </div>
-      <div class="col-6 col-md-4">
-        <a href="https://michaelatyourplace.com/" rel="noopener">Michael At Your Place</a><br>
-        <span>Private shows in Folly Beach, James Island, Charleston &amp; Mount Pleasant</span>
-      </div>
-    </div>
-    <p class="mt-3 mb-0 small" style="opacity:.75">© 2026. Independent guide, not affiliated with the businesses listed.</p>
-  </div>
+  © 2026 Folly Beach Bachelorette · <a href="privacy-policy.html">Privacy Policy</a>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
